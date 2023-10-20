@@ -1,0 +1,221 @@
+{
+  ConstraintSets:{
+    collapsed: {
+      container: {
+        height: 'preferWrap',
+        width: 'spread',
+        bottom: ['parent', 'bottom', 6],
+        start: ['parent', 'start', 8],
+        end: ['parent', 'end', 8],
+      },
+      back: {
+        visibility: 'gone',
+        rotationX: 180,
+        top: ['album_title', 'top', 0],
+        bottom: ['album_title', 'bottom', 0],
+        start: ['container', 'start', 6],
+      },
+      album_title: {
+        visibility: 'gone',
+        top: ['container', 'top', 12],
+        start: ['back', 'end', 6],
+        end: ['more', 'start', 6],
+      },
+      more: {
+        visibility: 'gone',
+        top: ['album_title', 'top', 0],
+        bottom: ['album_title', 'bottom', 0],
+        end: ['container', 'end', 6]
+      },
+      album_art: {
+        height: 'spread',
+        start: ['container', 'start', 8],
+        top: ['container', 'top', 8],
+        bottom: ['container', 'bottom', 8],
+      },
+      title: {
+        width: 'spread',
+        top: ['container', 'top', 6],
+        bottom: ['artist', 'top', 0],
+        start: ['album_art', 'end', 8],
+        end: ['favorite', 'start', 8],
+        custom: {
+          textSize: 16
+        }
+      },
+      artist: {
+        width: 'spread',
+        top: ['title', 'bottom', 0],
+        start: ['album_art', 'end', 8],
+        bottom: ['container', 'bottom', 6],
+        end: ['favorite', 'start', 8]
+      },
+      favorite: {
+        width: 24,
+        height: 24,
+        top: ['container', 'top', 6],
+        bottom: ['container', 'bottom', 6],
+        end: ['play_or_pause', 'start', 16],
+      },
+      previous: {
+        visibility: 'gone',
+        width: 24,
+        height: 24,
+        top: ['container', 'top', 6],
+        bottom: ['container', 'bottom', 6],
+        end: ['play_or_pause', 'start', 0]
+      },
+      play_or_pause: {
+        width: 24,
+        height: 24,
+        top: ['container', 'top', 6],
+        bottom: ['container', 'bottom', 6],
+        end: ['container', 'end', 16],
+      },
+      next: {
+        visibility: 'gone',
+        width: 24,
+        height: 24,
+        top: ['container', 'top', 6],
+        bottom: ['container', 'bottom', 6],
+        end: ['container', 'end', 6]
+      },
+      navigation: {
+        visibility: 'gone',
+        width: 24,
+        height: 24,
+        top: ['container', 'top', 6],
+        bottom: ['container', 'bottom', 6],
+        end: ['container', 'end', 6]
+      },
+      duration: {
+        width: 'spread',
+        height: 2,
+        start: ['container', 'start', 8],
+        end: ['container', 'end', 8],
+        bottom: ['container', 'bottom', 3],
+      },
+      duration_current: {
+        visibility: 'gone',
+        top: ['duration', 'bottom', 2],
+        start: ['duration', 'start', 0],
+      },
+      duration_max: {
+        visibility: 'gone',
+        top: ['duration', 'bottom', 2],
+        end: ['duration', 'end', 0]
+      }
+    },
+    expanded: {
+      container: {
+        height: 'parent',
+        width: 'parent',
+      },
+      back: {
+        visibility: 'visible',
+        width: 24,
+        height: 24,
+        top: ['album_title', 'top', 0],
+        bottom: ['album_title', 'bottom', 0],
+        start: ['container', 'start', 16],
+      },
+      album_title: {
+        visibility: 'visible',
+        width: 'spread',
+        start: ['back', 'end', 12],
+        end: ['more', 'start', 12],
+        top: ['container', 'top', 16],
+      },
+      more: {
+        visibility: 'visible',
+        width: 24,
+        height: 24,
+        top: ['album_title', 'top', 0],
+        bottom: ['album_title', 'bottom', 0],
+        end: ['container', 'end', 16]
+      },
+      album_art: {
+        width: 'preferWrap',
+        start: ['container', 'start', 24],
+        end: ['container', 'end', 24],
+        top: ['album_title', 'top', 0],
+        bottom: ['title', 'top', 0],
+      },
+      title: {
+        width: 'spread',
+        bottom: ['artist', 'top', 4],
+        start: ['container', 'start', 24],
+        end: ['container', 'end', 24],
+        custom: {
+          textSize: 24
+        }
+      },
+      artist: {
+        width: 'spread',
+        start: ['container', 'start', 24],
+        end: ['container', 'end', 24],
+        bottom: ['duration', 'top', 12],
+      },
+      duration: {
+        width: 'spread',
+        height: 4,
+        start: ['container', 'start', 24],
+        end: ['container', 'end', 24],
+        bottom: ['play_or_pause', 'top', 32],
+      },
+      duration_current: {
+        top: ['duration', 'bottom', 2],
+        start: ['duration', 'start', 0],
+      },
+      duration_max: {
+        top: ['duration', 'bottom', 2],
+        end: ['duration', 'end', 0]
+      },
+      favorite: {
+        width: 24,
+        height: 24,
+        bottom: ['play_or_pause', 'bottom', 0],
+        top: ['play_or_pause', 'top', 0],
+        start: ['container', 'start', 24],
+        end: ['previous', 'start', 0],
+      },
+      previous: {
+        width: 48,
+        height: 48,
+        bottom: ['play_or_pause', 'bottom', 0],
+        top: ['play_or_pause', 'top', 0],
+        end: ['play_or_pause', 'start', 0],
+        start: ['favorite', 'end', 0],
+      },
+      play_or_pause: {
+        width: 64,
+        height: 64,
+        bottom: ['container', 'bottom', 32],
+        end: ['previous', 'end', 0],
+        start: ['next', 'start', 0],
+      },
+      next: {
+        width: 48,
+        height: 48,
+        bottom: ['play_or_pause', 'bottom', 0],
+        top: ['play_or_pause', 'top', 0],
+        start: ['play_or_pause', 'end', 0],
+        end: ['navigation', 'start', 0],
+      },
+      navigation: {
+        width: 24,
+        height: 24,
+        bottom: ['play_or_pause', 'bottom', 0],
+        top: ['play_or_pause', 'top', 0],
+        start: ['next', 'end', 0],
+        end: ['parent', 'end', 24],
+      },
+    }
+  },
+  Transitions: {
+    default:{
+      from: 'collapsed',
+      to: 'expanded',
+    }
+  }
+}
